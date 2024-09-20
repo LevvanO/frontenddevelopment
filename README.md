@@ -113,7 +113,8 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 
 ### Stand van zaken
 
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+ik loop aardig wat achter en struggle best veel met de css. ik heb weinig tijd gehad deze week, maar nog steeds alle tijd die
+ik had besteed. Helaas was dat niet genoeg. Maar het moet wel goedkomen
 
 ### Agenda voor meeting
 
@@ -129,10 +130,8 @@ samen met je groepje opstellen
 
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
--   punt 1
--   punt 2
--   nog een punt
--   ...
+-   Pls help mij met mijn footer. Ik weet niet hoe ik de list items onder elkaar kan krijgen
+-   Hoe maak een slide systeempje
 
 </details>
 
