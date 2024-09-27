@@ -27,8 +27,8 @@
 html, body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden; 
   width: 100%; 
+  overflow-x: hidden;
 }
 
 body {
@@ -104,6 +104,66 @@ nav {
 	height: 60px; 
   }
 
+  .hamburger-menu {
+    display: none; 
+    position: fixed; 
+    background-color: white;
+    top: 0;
+    left: 0; 
+    width: 80%; 
+    height: 100%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    z-index: 999; 
+    transition: transform 0.3s ease; 
+    transform: translateX(100%); 
+}
+
+.hamburger-menu.active {
+    display: block; 
+    transform: translateX(0); 
+}
+
+.hamburger-menu ul {
+    list-style: none;
+    padding: 60px 0 0 0;
+    margin: 0; 
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	border-bottom: 1px solid #ddd;
+}
+
+.hamburger-menu li {
+    padding: 20px; 
+     
+
+}
+
+.hamburger-menu li a {
+    text-decoration: none;
+    color: black; 
+    display: block; 
+}
+
+.hamburger-menu .close-button {
+    background: none; 
+    border: none;
+    font-size: 24px; 
+    color: black; 
+    position: absolute; 
+    top: 20px; 
+    right: 20px;
+	width: calc(100% - 40px);
+}
+
+.hamburger-menu .close-button::after {
+    content: ""; 
+    display: block;
+    height: 1px; 
+    background: #ddd; 
+    margin-top: 5px; 
+}
+
 .section1 {
   padding-top: 10px;
   display: grid;
@@ -160,7 +220,7 @@ nav {
 }
 
 .shop-button:hover {
-    background-color: black; /* Iets donkerder bij hover */
+    background-color: black;
 	color: white;
 }
 
@@ -323,5 +383,141 @@ main section section:nth-of-type(4) a {
     z-index: 2; 
 }
 
+.section2 h2 {
+	text-align: center;
+	padding-bottom: 20px;
+	position: relative;
+	background-color: white;
+}
+
+.section2 {
+    position: relative;
+	overflow: hidden;
+	margin-top: -17em;
+}
+
+.gallery-header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 4em; /* Ruimte tussen de buttons en de titel */
+  }
+  
+  button.slide-left, button.slide-right {
+	background: none;
+	border: none;
+	font-size: 2rem;
+	cursor: pointer;
+  }
+
+.section2 ul{
+	display: flex;
+	transition: transform 0.5s ease;	
+	width: max-content;
+	padding-left: 11vw;
+	padding-right: 11vw;
+}
+
+.section2 ul li {
+	width: 80vw;
+	flex-shrink: 0;
+	padding: 10px;
+	list-style-type: none;
+}
+
+.section2 img {
+	width: 100%;
+}
+
+section div {
+	margin-top: 5em;
+}
+
+section div h2 {
+	display: flex;
+	justify-content: center;
+	background-color: lightgrey;
+	padding-top: 1.4em;
+	padding-bottom: 1.4em;
+	font-weight: 700;
+	font-size: 1.3em;
+}
+
+section div img {
+	max-width: 13em;
+
+}	
+
+section div ul {
+	display: flex;
+	list-style-type: none;
+	gap: 1px;
+}
+
+
+
+
 /*footer*/
 
+footer {
+	background-color: black;
+	color: white;
+	padding: 40px 20px;
+  }
+
+  
+  footer h2 {
+	font-size: 1.2rem;
+	margin-bottom: 5px;
+	font-weight: 600;
+	margin-top: 50px;
+  }
+  
+  footer ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-direction: column;
+	list-style-type: none;	
+	padding: 0;
+  }
+  
+  footer ul li {
+	margin-bottom: 10px; /* Dit zorgt voor ruimte tussen de lijstitems */
+  }
+  
+  footer ul li a {
+	color: white;
+	text-decoration: none;
+	font-size: 0.9rem;
+  }
+  
+  footer section input[type="email"] {
+	padding: 15px;
+	border: none;
+	margin-top: 10px;
+	width: 100%;
+	font-size: 1em;
+  }
+  
+  footer section button {
+	padding: 12px 25px;
+	background-color: white;
+	color: black;
+	border: none;
+	cursor: pointer;
+	margin-top: 10px;
+	transition: background-color 0.3s;
+	font-size: 1em;
+	font-weight: 400;
+  }	
+  
+  footer section button:hover {
+	background-color: #ddd; /* Lighten button on hover */
+  }
+  
+  footer section img {
+	max-width: 40px;
+	margin: 10px 5px;
+  }

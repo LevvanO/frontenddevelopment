@@ -54,10 +54,49 @@ hier de naam van de pagina
 
 ### Bevindingen
 
--voiceover is heel luid.
--voiceover is bijna niet te volgen
--alt tag is een beetje vaag bij fotos
--hij is niet optimaal responsive want sommige letters zijn niet te lezen op telefoon
+Na het doorlopen van de WCAG checklist zijn dit de bevindingen die ik heb gedaan:
+
+CONTENT:
+Ik zie niet echt iets wat verkeert is bij spalding als het gaat om content. Ze gebruiken normale woorden en zinnen en alle buttons zijn unique en makkelijk te herkennen
+
+GLOBAL CODE:
+-Er zitten best wel veel errors in de validator van inspect. De meeste lijken te gaan over een cookies issue en een issue over een inappropiate value. Voor de rest geen errors
+-ze hebben drie million divjes dus het klopt sws niet.
+-elke titel heeft een unieke titel
+-viewport is te gebruiken
+
+KEYBOARD:
+-Er is een visible focus style voor interatieve elementen, maar ik vond het wel lastig te gebruiken, want ik merkte dat ie soms sprong op elementen die ik niet kon zien en dus was ik het kwijt en moest ik soms opnieuw beginnen of veel te klikken om de onderlijning weer te zien. Maar je kan wel elke button bereiken met alleen je toetsenbord
+
+MOBILE AND TOUCH
+-als ik de telefoon draai is het nog steeds goed.
+-heeft geen horizontale scrolling
+-geen buttons die moeilijk te vinden of te klikken. Soms in de footer zitten dingen iets te veel op elkaar.
+-Je activeert niks als je scrollt. werkt gwn goed.
+
+HEADINGS
+-Alles is h2. Nog goed te volgen
+-h1 is het logo
+-Het is niet helemaal want alles is een h2 en niet alles is even groot.
+-de website skipt h1. Ze hebben van een img een h1 gemaakt. Kan wel maar wel een beetje raar lijkt mij
+
+LISTS:
+-er worden li's gebruikt
+
+IMAGES:
+-De images hebben geen alt tekst. heel slecht.
+
+MEDIA:
+-niet van toepassing
+
+CONTROLS:
+-a'tjes worden goed gebruikt voor links
+-de footer linkjes zien er niet helemaal uit als een link. maarja hoe ziet een link er precies uit.
+-Als ik op tab klik gebeurt er niks. dus het werkt niet goed.
+-ze gebruiken buttons goed
+-de website heeft geen skip links
+-hebben dat niet
+
 
 </details>
 
@@ -133,6 +172,8 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 -   Pls help mij met mijn footer. Ik weet niet hoe ik de list items onder elkaar kan krijgen
 -   Hoe maak een slide systeempje
 
+
+
 </details>
 
 ## Toegankelijkheidstest 2/2 (week 4)
@@ -142,7 +183,8 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 
 ### Bevindingen
 
-Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+help mij met een hamburger menu.
+-kan ik details tag gebruiken voor een soort drop down list?
 
 </details>
 
@@ -207,8 +249,8 @@ Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 Nb. ChatGpT en andere AI horen er ook bij.
 Nb. Vermeld de bronnen ook in je code.
 
-1. bron 1
-2. bron 2
+1. https://chatgpt.com/c/66f697d4-c2dc-800d-81a3-1fa0a0dc081d
+2. https://www.w3schools.com/
 3. ...
 
 </details>

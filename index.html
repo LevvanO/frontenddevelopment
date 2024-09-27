@@ -3,10 +3,10 @@
 	
 <head>
 	<meta charset="UTF-8">
-	<meta name="author" content="jouw naam">
+	<meta name="author" content="Lev van Oers">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	<title></title>
+	<title>Spalding</title>
 	
 	<link href="styles/style.css" rel="stylesheet">
 	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
@@ -19,14 +19,31 @@
 		</section>
 		<nav class="navbar">
 			<ul>
-				<li><a href="hamburgermenu.html"><img src="images/hamburgermenu icoon.webp" alt="hamburgermenuicoon"></a></li>
+				<li><a href="#" id="hamburger"><img src="images/hamburgermenu icoon.webp" alt="hamburgermenuicoon"></a></li>
 				<li><a href="zoeken.html"><img src="images/zoek icoon website fed.webp" alt="zoekicoon"></a></li>
-				<li class="spalding-logo" ><a href="index.html"><img src="images/spalding-logo_310x.png" alt="Spalding logo"></a></li>
+				<li class="spalding-logo"><a href="index.html"><img src="images/spalding-logo_310x.png" alt="Spalding logo"></a></li>
 				<li><a href="profiel.html"><img src="images/profiel icoon website fed.webp" alt="profielicoon"></a></li>
 				<li><a href="winkelwagen.html"><img src="images/shopping icoon website fed.webp" alt="shoppingicoon"></a></li>
 			</ul>
+			<div class="hamburger-menu" id="hamburger-menu">
+				<button id="close-button" class="close-button">✖</button>
+				<ul>
+					<li><a href="#">Basketbal</a></li>
+					<li><a href="#">Heren</a></li>
+					<li><a href="#">Dames</a></li>
+					<li><a href="#">Kinderen</a></li>
+					<li><a href="#">Outlet</a></li>
+					<li>
+						<a href="#">Nederland (EUR€)</a>
+						<ul>
+							<li><a href="#">België (EUR€)</a></li>
+						</ul>
+					</li>
+				</ul>    
+			</div>
 		</nav>
 	</header>
+	
 	<main>
 		<section class="section1">
 			<img src="images/foto voor website 1.jpg" alt="mainpaginafoto">
@@ -59,22 +76,80 @@
 				<a href="#">SHOP ALLE BASKETBALSYSTEMEN</a>
 			</section>
 		</section>
-		<section>
-			<h2>WAT IS TRENDING</h2>
-			<a href=""></a>
-			<a href=""></a>
+		<section class="section2">
+			<div class="gallery-header">
+				<button id="slideLeft" class="slide-left">⏴</button> 
+				<h2>WAT IS TRENDING</h2>
+				<button id="slideRight" class="slide-right">⏵</button> 
+			</div>
+			<ul>
+				<li>
+					<img src="images/spalding-ascend-blues-composite-indoor-basketball-322663_540x.jpg" alt="basketbalblauw">
+					<p>Ascend  Blues Composiet Indoor Basketbal</p>
+					<p>€79,95</p>
+				</li>
+				<li>
+					<img src="images/spalding-bomber-jacket-ascend-753199_540x.jpg" alt="bomberjacket">
+					<p>Bomber 'Ascend'</p>
+					<p>€169,95</p>
+				</li>
+				<li>
+					<img src="images/spalding-doubleface-kids-set-468231_540x.jpg" alt="kidsset">
+					<p>DoubleFace Set Voor Kinderen</p>
+					<p>€44,95</p>
+					
+				</li>
+				<li>
+					<img src="images/spalding-essential-reversible-shirt-197272_540x.jpg" alt="reversibleshirt">
+					<p>Essential Reversible Shirt</p>
+					<p>€14,95</p>
+					
+				</li>
+				<li>
+					<img src="images/spalding-gold-tf-portable-basketball-hoop-172714_540x.jpg" alt="basketbalhoop">
+					<p>Gold TF Draagbare Basketbalring</p>
+					<p>€1.199,95</p>
+				</li>
+				<li>
+					
+					<img src="images/spalding-hoody-dress-women-396387_540x.jpg" alt="hoodydress">
+					<p>Hoody Dress Voor Vrouwen</p>
+					<p>€79,95</p>
+				</li>
+				<li>
+					<img src="images/spalding-legacy-tf-1000-composite-indoor-basketball-920872_540x.jpg" alt="legacybasketbal">
+					<p>Legacy TF-1000 Composiet Indoor Basketbal</p>
+					<p>€74,96</p>
+				</li>
+				<li>
+					<img src="images/spalding-max-grip-composite-indooroutdoor-basketball-334118_540x.jpg" alt="maxgripbasketbal">
+					<p>Max Grip Composiet Indoor/Outdoor Basketbal</p>
+					<p>€69,95</p>
+				</li>
+				<li>
+					<img src="images/spalding-t-shirt-feathers-men-261167_540x.jpg" alt="tshirtfeithers">
+					<p>T-shirt 'Feathers' Voor Mannen</p>
+					<p>€39,95</p>
+				</li>
+			
+			</ul>
+
 		</section>
 		<section>
+			<div>
 			<h2>#MADEFORTHEGAME</h2>
-			<img src="" alt="">
-			<img src="" alt="">
-			<img src="" alt="">
-			<img src="" alt="">
-			<img src="" alt="">
+			<button>⏴</button>
+			<ul>
+				<li><img src="images/download.jpeg" alt="Basketballenbijraam"></li>
+				<li><img src="images/spaldinggroenetrui.jpg" alt="spaldinggroenetrui"></li>
+				<li><img src="images/tweekindjes.jpg" alt="tweekindjes met spalding trui aan"></li>
+				<li><img src="images/vrouwmetspaldingkleding.jpg" alt="mevrouw met een spalding tracksuit"></li>
+			</ul>
+			<button>⏵</button>
+			</div>
 		</section>
 		<footer>
 			<section>
-				<section>
 					<h2>OVER SPALDING</h2>
 					<ul>
 						<li><a href="#">Geschiedenis</a></li>
@@ -83,8 +158,6 @@
 						<li><a href="#">Instagram</a></li>
 						<li><a href="#">TikTok</a></li>
 					</ul>
-				</section>
-				<section>
 					<h2>KLANTENSERVICE</h2>
 					<ul>
 						<li><a href="#">FAQ</a></li>
@@ -95,8 +168,6 @@
 						<li><a href="#">Retourneren</a></li>
 						<li><a href="#">Garantie</a></li>
 					</ul>
-				</section>
-				<section>
 					<h2>WETTELIJK</h2>
 					<ul>
 						<li><a href="#">Algemene voorwaarden</a></li>
@@ -105,12 +176,10 @@
 						<li><a href="#">Cookiebeleid</a></li>
 						<li><a href="#">Imprint</a></li>
 					</ul>
-				</section>
-				<section>
 					<h2>SCHRIJF JE IN VOOR DE NIEUWSBRIEF</h2>
 					<p>Schrijf je in voor onze nieuwsbrief en wees als eerste op de hoogte van onze deals en toffe content. En krijg 10% korting op je eerste bestelling!</p>
 					<p>Email:</p>
-					<input type="email" placeholder="Voer je email in">
+					<input type="email" placeholder="E-MAIL">
 					<button>Bevestig</button>
 				</section>
 				<section>
@@ -122,8 +191,9 @@
 					<img src="images/PayPal-Logo.png" alt="PayPal">
 					<img src="images/shop app logo.png" alt="Shop App">
 					<img src="images/UnionPay_logo.svg.png" alt="UnionPay">
+					
 				</section>
-			</section>
+
 		</footer>
 
 	</main>
