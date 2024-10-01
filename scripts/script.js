@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const carousel = document.querySelector('main > section > section > ul'); // Selecteert de juiste ul binnen de structuur
     const hamburgerMenu = document.getElementById('hamburger-menu');
 
+    let listItems = carousel.children;
+
     // Controleer of carousel bestaat
     if (!carousel) {
         console.log('Carousel element niet gevonden');
@@ -21,7 +23,9 @@ document.addEventListener('DOMContentLoaded', function () {
     let itemWidth = listItems[0].clientWidth; // Verkrijg de breedte van het eerste item
     let currentIndex = 0;
     let isTransitioning = false;
-    let listItems = carousel.children;
+    
+
+    
 
     // Voeg de klonen toe aan de carrousel
     carousel.appendChild(firstItemClone);

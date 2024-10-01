@@ -19,7 +19,7 @@
 		<nav>
 			<ul>
 				<li>
-					<a href="#" id="hamburger"><img src="images/hamburgermenu-icoon.webp" alt="hamburgermenu"/></a>
+					<a href="#" id="hamburger"><img src="images/hamburgermenu-icoon.webp" alt="menu"/></a>
 				</li>
 				<li>
 					<a href="zoeken.html"><img src="images/zoek-icoon-website-fed.webp" alt="zoeken"/></a>
@@ -35,19 +35,14 @@
 				</li>
 			</ul>
 			<div class="hamburger-menu" id="hamburger-menu">
-				<button id="close-button" class="close-button">✖</button>
+				<button id="close-button" class="close-button" aria-label="een kruisje om het hamburgermenu te verlaten">✖</button>
 				<ul>
-					<li><a href="#">Basketbal</a></li>
+					<li><a href="product.html">Basketbal</a></li>
 					<li><a href="#">Heren</a></li>
 					<li><a href="#">Dames</a></li>
 					<li><a href="#">Kinderen</a></li>
 					<li><a href="#">Outlet</a></li>
-					<li>
-						<a href="#">Nederland (EUR€)</a>
-						<ul>
-							<li><a href="#">België (EUR€)</a></li>
-						</ul>
-					</li>
+					<li><a href="#">Nederland (EUR€)</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -81,7 +76,7 @@
 				<button id="Winkelmandje">IN HET WINKELMANDJE</button>
 				<p><span>SKU:</span>7B1560CN</p>
 				<details>
-					<summary>
+					<summary aria-label="Open dit uitklapmenu voor meer informatie over de beschrijving">
 						<span>Beschrijving</span>
 						<img src="images/plusje.png" alt="plusje">
 					</summary>
@@ -99,7 +94,7 @@
 				</details>
 				<details>
 					<summary>
-						<span>Features</span>
+						<span aria-label="open dit uitklapmenu voor de features">Features</span>
 						<img src="images/plusje.png" alt="plusje">
 					</summary>
 					<p>• Boardgrootte: 60 ”(152,4 cm)</p>
@@ -112,8 +107,8 @@
 					<p>• Paal: 5 ”(12,7 cm)</p>
 					<p>• 2-delige paal</p>
 				</details>
-				<a href="#">INTERACTIVE MANUAL</a>
-				<a href="#">OWNER'S MANUAL</a>
+				<a href="#" aria-label="Link naar interactive manual">INTERACTIVE MANUAL</a>
+				<a href="#" aria-label="link naar owner's manual">OWNER'S MANUAL</a>
 			</section>
         	<section>
 					<img src="images/Basketbalschieten.jpg" alt="jongetje speelt basketbal">
@@ -141,7 +136,7 @@
 			    </div>
 				<p>Gebaseerd op 1 beoordeling</p>
 				<img id="review" src="/images/reviewsvandebasket.png" alt="foto van de reviews op de basket">
-					<select id="keuzes" name="keuzes">
+					<select id="keuzes" name="keuzes" aria-label="dit menu opent meerdere keuzens">
 						<option value="optie1">Hoogste waardering</option>
 						<option value="optie2">Laagste waardering</option>
 						<option value="optie3">Alleen afbeeldingen</option>
