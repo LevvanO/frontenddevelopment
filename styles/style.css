@@ -15,8 +15,31 @@
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-  --color-text: #111;
-  --color-background: #eee;
+  --color-background: #ffffff;
+  --color-backgroundblack: #000000;
+  --color-backgroundnav: #ffffff;
+  --color-text: #ffffff;
+  --color-link: #000000;
+  --color-textblack: #000000;
+  --color-borderbottom: #ddd;
+  --color-bordergray: #808080;
+  --color-borderlightgray: #d3d3d3;
+  --color-green: #008000;
+  --color-backgroundweirdgray: #e9e9e9;
+  --color-orange: #ffa500;
+  --color-footerbackground: #000000;
+  --color-footerwhite: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-background: #3c3c3c;
+		--color-backgroundblack: #ffffff;
+		--color-link: #ffffff;
+		--color-textblack: #ffffff;
+		--color-backgroundnav: #5a5a5a;
+
+	}
 }
 
 
@@ -34,87 +57,88 @@ html, body {
 body {
   margin: 0;
   padding: 0;
+  background-color: var(--color-background);
 }
 
+/* HEADER */
 
 header section {
 	padding: 10px 0;
 	text-align: center;
-	background-color: black;
-	color: white;
+	background-color: var(--color-black);
+	color: var(--color-white);
 }
 
 header section p {
 	display: flex;
 	justify-content: center;
-	background-color: black;
-	color: white;
+	background-color: var(--color-black);
+	color: var(--color-white);
 	padding-top: 8px;
 	padding-bottom: 8px;
 	font-weight: 300;
 	font-size: 0.9em;
 }
 
+/* NAVBAR */
+
 nav {
-  background-color: white;
   padding: 10px 20px;
 }
 
-.navbar {
-	position: fixed;
+nav {
+	position: fixed; /* vraagje aan chatgpt: hoe zorg ik ervoor dat mijn navbar blijft staan ookal scroll ik naar beneden?*/
 	top: 0; 
 	left: 0; 
 	width: 100%;  
-	z-index: 10;
+	z-index: 10; 
 	display: flex;
 	justify-content: center;
-	background-color: white;
+	background-color: var(--color-backgroundnav);
   }
 
-.navbar ul{
+nav ul{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
 
-.navbar li {
+nav li {
   padding: 10px;
   list-style-type: none;
   margin-left: 8px;
 }
 
-.navbar li a {
-  color: black;
+nav li a {
+  color: var(--color-link);
   text-decoration: none;
   font-size: 16px;
 }
 
-.navbar li img {
+nav li img {
   height: 25px;
 }
 
-.navbar li.spalding-logo {
+nav li.spalding-logo {
 	flex-grow: 1; 
 	display: flex;
 	justify-content: center; 
 
   }
   
-  .navbar li.spalding-logo img {
+nav li.spalding-logo img {
 	height: 60px; 
   }
 
   .hamburger-menu {
     display: none; 
     position: fixed; 
-    background-color: white;
+    background-color: var(--color-background);
     top: 0;
     left: 0; 
     width: 80%; 
-    height: 100%; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    z-index: 999; 
-    transition: transform 0.3s ease; 
+    height: 100%;  
+    z-index: 999;  
     transform: translateX(100%); 
 }
 
@@ -130,18 +154,20 @@ nav {
 	display: flex;
 	flex-direction: column;
 	align-items: start;
-	border-bottom: 1px solid #ddd;
+	
 }
 
 .hamburger-menu li {
     padding: 20px; 
-     
+}
 
+.hamburger-menu ul {
+	border-top: 1px solid var(--color-borderbottom);
 }
 
 .hamburger-menu li a {
     text-decoration: none;
-    color: black; 
+    color: var(--color-link); 
     display: block; 
 }
 
@@ -149,248 +175,288 @@ nav {
     background: none; 
     border: none;
     font-size: 24px; 
-    color: black; 
+    color: var(--color-link); 
     position: absolute; 
     top: 20px; 
     right: 20px;
 	width: calc(100% - 40px);
+	text-align: end;
 }
 
 .hamburger-menu .close-button::after {
     content: ""; 
     display: block;
     height: 1px; 
-    background: #ddd; 
+    background: var(--color-borderbottom); 
     margin-top: 5px; 
 }
 
-.section1 {
-  padding-top: 10px;
-  display: grid;
-  position: relative;
-  height: 80vh; 	
-  overflow: hidden;
-}
+/* Main */
 
-.section1 img {
-  grid-area: 1 / 1;
-  width: 100vw;
-  height: 100%;
-  object-fit: cover;
-  object-position: 80% 30%;
-  clip-path: inset(5% 0 0 0);
-  filter: brightness(0.9);
-}
-
-.section1 h1, .section1 p {
-  grid-area: 1 / 1;
-  color: white;
-  text-align: left;
-  padding: 20px;
-  margin: 0;
-  z-index: 1;
-  margin-top: 15px;
-}
-
-.section1 h1 {
-  font-size: 3rem;
-  font-weight: 600;
-  margin-bottom: 10px;
-  line-height: 1.2em;
-}
-
-.section1 p {
-  font-weight: 250;
-  margin-top: 150px;
-  font-size: 1.5rem;
-}
-
-.shop-button {
+#indexmain section section:nth-of-type(1) {
+	padding-top: 3em;
+	display: flex; 
+	flex-direction: column; 
+	position: relative;
+	height: 80vh; 	
+	overflow: hidden;
+	align-items: flex-start; 
+	justify-content: flex-start; 
+  }
+  
+ 
+  #indexmain section section:nth-of-type(1) img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 85%;
+	object-fit: cover;
+	object-position: 80% 30%;
+	margin-bottom: 0;
+	clip-path: inset(5% 0 0 0);
+	filter: brightness(0.9);
+	z-index: 0; 
+  }
+  
+  
+  #indexmain section section:nth-of-type(1) h1,
+  #indexmain section section:nth-of-type(1) p {
+	position: relative;
+	color: var(--color-text);
+	z-index: 1;
+	padding: 20px;
+	margin: 0;
+	text-align: left;
+  }
+  
+  #indexmain section section:nth-of-type(1) h1 {
+	font-size: 3em;
+	font-weight: 600;	
+	margin-bottom: 0;
+	line-height: 1.2em;
+  }
+  
+  #indexmain section section:nth-of-type(1) p {
+	font-size: 1.2em;
+	margin-top: -1.5em; 
+	font-weight: 250;
+  }
+  
+  
+  .shop-button {
 	display: inline-block;
-    padding: 10px 20px;
-    background-color: white; 
-    color: black; 
-    text-decoration: none;  
-    position: absolute; 
-    bottom: 120px;
-    left: 20px; 
+	padding: 10px 20px;
+	background-color: var(--color-background); 
+	color: var(--color-textblack); 
+	text-decoration: none;  
 	font-weight: 300;
-    transition: background-color 0.6s; 
-    z-index: 2; 
-}
-
-.shop-button:hover {
-    background-color: black;
-	color: white;
-}
-
-@media (max-width: 768px) {
-  .section1 h1 {
-    font-size: 3rem;
+	transition: background-color 0.6s; 
+	z-index: 1;
+	margin-top: 0;
+	margin-left: 20px;
   }
+  
+  .shop-button:hover {
+	background-color: var(--color-backgroundblack);
+	color: var(--color-text);
+  }
+  
+  /* Media Queries voor kleinere schermen */
 
-  .section1 p {
+  
+
+/* Begin main index */
+/* (verander alle main dingen van de index pagina naar #indexmain en die van product naar #productmain */
+
+/* chat gpt prompt: Kan je al die section types mooi responsive maken met een beetje ruimte aan de zijkanten van de pagina's. dat de image duss niet de hele pagina overneemt. En dat er een beetje ruimte zit tussen elke nieuwe section.*/
+/* het lukte me niet helemaal om de sections een beetje responsive te krijgen, dus wilde ik kijken hoe 
+chatgpt het deed. Dus vroeg ik dat om het ee beetje te vergelijken*/
+#indexmain section section:nth-of-type(2) {
+	position: relative; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: auto;
+    padding: 20px;
+	margin-top: -5em;
+}
+
+#indexmain section section:nth-of-type(2) img {
+	width: 100%; 
+    max-width: 375px; 
+    height: auto; 
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: relative;
+}
+
+#indexmain section section:nth-of-type(2) h2 {
+	position: absolute;
+    top: 70%; 
+    left: 33%; 
+    transform: translate(-50%, -50%); 
+    color: white;
     font-size: 1.5rem;
-  }
-
-  .navbar {
-    flex-direction: row; /* Zorg dat alles netjes naast elkaar blijft */
-  }
-
-  .navbar img {
-    height: 50px; /* Pas de grootte van de afbeeldingen aan voor mobiel */
-  }
-
-  .section1 img {
-    width: 100vw; /* Zorg dat het zich volledig aanpast aan de viewport */
-  }
+    z-index: 2;
 }
 
-main section section:nth-of-type(1) {
-	display: grid;
-	position: relative;
-	height: 80vh;
-	margin-top: 60px;
-}
-
-main section section:nth-of-type(1) img {
-	max-width: 375px;
-	margin-left: 20px;
-}
-
-main section section:nth-of-type(1) h2 {
+#indexmain section section:nth-of-type(2) a {
 	position: absolute;
-	top: 260px;
-	left: 40px;
-	color: white;
-	z-index: 2;
-}
-
-main section section:nth-of-type(1) a {
-	display: inline-block;
+    top: 82%; 
+    left: 40%; 
+    transform: translate(-50%, -50%); 
+	background-color: var(--color-background);
+    color: var(--color-link);
     padding: 10px 20px;
-    background-color: white; 
-    color: black; 
-    text-decoration: none;  
-    position: absolute; 
-    top: 310px;
-    left: 33px; 
-	font-weight: 200;
-    transition: background-color 0.6s; 
-    z-index: 2; 
+    font-size: 1rem;
+    z-index: 2;
+    text-decoration: none;
 }
 
-main section section:nth-of-type(2) {
-	display: grid;
-	position: relative;
-	height: 80vh;
-	margin-top: -300px;
+
+#indexmain section section:nth-of-type(3) {
+	position: relative; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: auto;
+    padding: 20px;
 }
 
-main section section:nth-of-type(2) img {
-	max-width: 375px;
-	margin-left: 20px;
+#indexmain section section:nth-of-type(3) img {
+	width: 100%; 
+    max-width: 375px; 
+    height: auto; 
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: relative;
 }
 
-main section section:nth-of-type(2) h2 {
+#indexmain section section:nth-of-type(3) h2 {
 	position: absolute;
-	top: 260px;
-	left: 40px;
-	color: white;
-	z-index: 2;
+    top: 70%; 
+    left: 33%; 
+    transform: translate(-50%, -50%); 
+    color: white;
+    font-size: 1.5rem;
+    z-index: 2;
 }
 
-main section section:nth-of-type(2) a {
-	display: inline-block;
-    padding: 10px 20px;
-    background-color: white; 
-    color: black; 
-    text-decoration: none;  
-    position: absolute; 
-    top: 310px;
-    left: 33px; 
-	font-weight: 200;
-    transition: background-color 0.6s; 
-    z-index: 2; 
-}
-
-main section section:nth-of-type(3) {
-	display: grid;
-	position: relative;
-	height: 80vh;
-	margin-top: -300px;
-}
-
-main section section:nth-of-type(3) img {
-	max-width: 375px;
-	margin-left: 20px;
-}
-
-main section section:nth-of-type(3) h2 {
+#indexmain section section:nth-of-type(3) a {
 	position: absolute;
-	top: 260px;
-	left: 40px;
-	color: white;
-	z-index: 2;
-}
-
-main section section:nth-of-type(3) a {
-	display: inline-block;
+    top: 82%; 
+    left: 40%; 
+    transform: translate(-50%, -50%); 
+	background-color: var(--color-background);
+    color: var(--color-link);
     padding: 10px 20px;
-    background-color: white; 
-    color: black; 
-    text-decoration: none;  
-    position: absolute; 
-    top: 310px;
-    left: 33px; 
-	font-weight: 200;
-    transition: background-color 0.6s; 
-    z-index: 2; 
+    font-size: 1rem;
+    z-index: 2;
+    text-decoration: none;
 }
 
-main section section:nth-of-type(4) {
-	display: grid;
-	position: relative;
-	height: 80vh;
-	margin-top: -300px;
+#indexmain section section:nth-of-type(4) {
+	position: relative; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: auto;
+    padding: 20px;
 }
 
-main section section:nth-of-type(4) img {
-	max-width: 375px;
-	height: 380px;
-	margin-left: 20px;
+#indexmain section section:nth-of-type(4) img {
+	width: 100%;
+    max-width: 375px; 
+    height: auto; 
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: relative;
 }
 
-main section section:nth-of-type(4) h2 {
+#indexmain section section:nth-of-type(4) h2 {
 	position: absolute;
-	top: 260px;
-	left: 40px;
-	color: white;
-	z-index: 2;
+    top: 70%; 
+    left: 33%; 
+    transform: translate(-50%, -50%); 
+    color: white;
+    font-size: 1.5rem;
+    z-index: 2;
 }
 
-main section section:nth-of-type(4) a {
-	display: inline-block;
+#indexmain section section:nth-of-type(4) a {
+	position: absolute;
+    top: 82%; 
+    left: 40%; 
+    transform: translate(-50%, -50%); 
+	background-color: var(--color-background);
+    color: var(--color-link);
     padding: 10px 20px;
-    background-color: white; 
-    color: black; 
-    text-decoration: none;  
-    position: absolute; 
-    top: 310px;
-    left: 33px; 
-	font-weight: 200;
-    transition: background-color 0.6s; 
-    z-index: 2; 
+    font-size: 1rem;
+    z-index: 2;
+    text-decoration: none;
 }
 
-.section2 h2 {
+#indexmain section section:nth-of-type(5) {
+	position: relative; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: auto;
+    padding: 20px;
+	margin-bottom: 25em;
+}
+
+#indexmain section section:nth-of-type(5) img {
+	width: 100%; 
+    max-width: 375px; 
+    height: 24em; 
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: relative;
+}
+
+#indexmain section section:nth-of-type(5) h2 {
+	position: absolute;
+    top: 70%; 
+    left: 42%; 
+    transform: translate(-50%, -50%); 
+    color: white;
+    font-size: 1.5rem;
+    z-index: 2;
+}
+
+#indexmain section section:nth-of-type(5) a {
+	position: absolute;
+    top: 82%; 
+    left: 42%; 
+    transform: translate(-50%, -50%); 
+	background-color: var(--color-background);
+    color: var(--color-link);
+    padding: 10px 20px;
+	padding-right: 4em;
+    font-size: 1rem;
+    z-index: 2;
+    text-decoration: none; 
+}
+
+#indexmain section section:nth-of-type(6) h2 {
 	text-align: center;
 	padding-bottom: 20px;
 	position: relative;
-	background-color: white;
+	background-color: var(--color-background);
+	color: var(--color-link);
 }
 
-.section2 {
+#indexmain section section:nth-of-type(6) p {
+	color: var(--color-link);
+}
+
+#indexmain section section:nth-of-type(6) {
     position: relative;
 	overflow: hidden;
 	margin-top: -17em;
@@ -400,17 +466,17 @@ main section section:nth-of-type(4) a {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: 4em; /* Ruimte tussen de buttons en de titel */
+	gap: 4em; 
   }
+
   
   button.slide-left, button.slide-right {
 	background: none;
 	border: none;
 	font-size: 2rem;
-	cursor: pointer;
   }
 
-.section2 ul{
+#indexmain section section:nth-of-type(6) ul{
 	display: flex;
 	transition: transform 0.5s ease;	
 	width: max-content;
@@ -418,51 +484,361 @@ main section section:nth-of-type(4) a {
 	padding-right: 11vw;
 }
 
-.section2 ul li {
+#indexmain section section:nth-of-type(6) ul li {
 	width: 80vw;
 	flex-shrink: 0;
 	padding: 10px;
 	list-style-type: none;
 }
 
-.section2 img {
+#indexmain section section:nth-of-type(6) img {
 	width: 100%;
 }
 
-section div {
+/* PRODUCT.HTML */
+
+#productmain section div img{
 	margin-top: 5em;
+	max-width: 25em;
 }
 
-section div h2 {
+#mainImage {
+	display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#productmain ul {
 	display: flex;
+    list-style-type: none;
 	justify-content: center;
-	background-color: lightgrey;
-	padding-top: 1.4em;
-	padding-bottom: 1.4em;
+    padding: 0;
+    margin-top: -5em;
+}
+
+#productmain ul li {
+	margin-right: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+#productmain ul li img {
+	width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+#productmain ul li img:hover {
+	border-color: var(--color-bordergray);
+}
+
+
+#productmain ul li.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--color-backgroundblack);
+    width: 100%;
+}
+
+#productmain div h1 {
+	margin-left: 0.7em;
+}
+
+#productmain div p {
+	margin-left: 1em;
+}
+
+#productmain div div {
+	display: flex;
+	border-bottom: 1px solid var(--color-borderbottom);
+}
+
+#productmain div div img {
+	max-width: 8em;
+	margin-top: 1em;
+	margin-left: 0.6em;
+	margin-bottom: 1em;
+}
+
+#productmain div div p {
+	margin-top: 1.5em;
+	margin-bottom: 1.3em;
+}
+
+#productmain section section:nth-of-type(2) p {
+	margin-top: 3em;
+	font-weight: 600;
+	margin-left: 1em;
+}
+
+#quantity {
+    border: 1px solid var(--color-borderlightgray);
+	padding-left: 15px;
+	padding-bottom: 9px;
+	padding-top: 8px;
+	padding-right: 22px;
+    margin: 0 10px;
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+}
+
+#minus {
+	border: 1px solid var(--color-borderlightgray);
+    padding: 10px 10px;
+    margin: 0;
+	margin-top: 1em;
+	margin-left: 1.2em;
+    display: inline-block;
+    width: 40px;
+    text-align: center;
+	background-color: var(--color-background);
+}
+
+#plus {
+	border: 1px solid var(--color-borderlightgray);
+    padding: 10px 10px;
+    margin: 0;
+    display: inline-block;
+    width: 40px;
+    text-align: center;
+	background-color: var(--color-background);
+}
+
+#Winkelmandje {
+	display: block;
+	margin-top: 2.5em;
+	margin-left: 1.5em;
+	padding-left: 6em;	
+	padding-right: 6em;
+	padding-top: 0.8em;
+	padding-bottom: 0.8em;
+	font-size: 1em;
+	color: var(--color-text);
+	background-color: var(--color-green);
+	align-items: center;
+	border: none;
+}
+
+/*vergeet dit niet te veranderen naar een div*/
+
+#productmain section section:nth-of-type(2) p:nth-of-type(2) span {
 	font-weight: 700;
+}
+
+#productmain section section:nth-of-type(2) p:nth-of-type(2) {
+	font-weight: 300;
+	margin-top: 1em;
+	border-bottom: 1px solid var(--color-borderbottom);
+	width: 90%;
+}
+
+#productmain section section:nth-of-type(2) details summary img {
+	display: flex;
+    height: 2em;
+    width: 1.5em;
+    margin-left: 22em;
+	margin-top: -1.5em;
+}
+
+#productmain section section:nth-of-type(2) details summary {
+	list-style: none;
+	margin-left: 1em;
+	font-weight: 600;
+	margin-top: 1em;
+	border-bottom: 1px solid var(--color-borderbottom);
+	width: 90%;
+}
+
+#productmain section section:nth-of-type(2) details p {
+	font-weight: 300;
+	margin-top: 0.5em;
+}
+
+#productmain section section:nth-of-type(2) details:nth-of-type(2) p:nth-of-type(2) {
+	border-bottom: none;
+}
+
+#productmain section section:nth-of-type(2) a {
+	margin-top: 2em;
+	color: var(--color-link);
+	display: block;
+	font-size: 0.8em;
+	margin-left: 1.8em;
+}
+
+#productmain section section:nth-of-type(3) {
+	background-color: var(--color-backgroundweirdgray);
+	margin-top: 4em;
+	padding-bottom: 4em;
+}
+
+#productmain section section:nth-of-type(3) img {
+	max-width: 23em;
+	margin-top: 3em;
+	margin-left: 1.4em;
+}
+
+#productmain section section:nth-of-type(3) h2 {
+	font-weight: 600;
+	margin-top: 0.8em;
+	margin-left: 1em;
+}
+
+#productmain section section:nth-of-type(3) p {
+	margin-top: 1em;
+	margin-left: 1.4em;
+	margin-right: 1em;
+}
+
+#productmain section section:nth-of-type(4) {
+	margin-top: 1em;
+	padding-bottom: 2em;
+}
+
+#productmain section section:nth-of-type(4) img {
+	max-width: 23em;
+	margin-top: 3em;
+	margin-left: 1.4em;
+}
+
+#productmain section section:nth-of-type(4) h2 {
+	font-weight: 600;
+	margin-top: 0.8em;
+	margin-left: 1em;
+}
+
+#productmain section section:nth-of-type(4) p {
+	margin-top: 1em;
+	margin-left: 1.4em;
+	margin-right: 1em;
+}
+
+#productmain section section:nth-of-type(5) {
+	margin-top: 2em;
+	background-color: var(--color-backgroundweirdgray);
+}
+
+#productmain section section:nth-of-type(5) h2 {
+	padding-top: 3em;
+	margin-left: 4em;
+}
+
+#productmain section section:nth-of-type(5) div {
+	display: flex;
+}
+
+#productmain section section:nth-of-type(5) div img {
+	max-width: 7em;
+	margin-top: -0.2em;
+	margin-left: 5em;
+}
+
+#productmain section section:nth-of-type(5) div p {
+	color: var(--color-orange);
+	text-decoration: underline;
+	transform: translateX(-4.6em);	
+}
+
+#productmain section section:nth-of-type(5) p:nth-of-type(1) {
+	margin-left: 5.7em;
+}
+
+#productmain section section:nth-of-type(5) select {
+	padding: 0.5em;
+	width: 12em;
+	background-color: var(--color-backgroundweirdgray); 
+	border: none;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	color: var(--color-orange);
+	border-top: 1px solid var(--color-borderbottom);
+	border-bottom: 1px solid var(--color-borderbottom);
+	width: 100%;
+}
+
+#productmain section section:nth-of-type(5) div:nth-of-type(2) img {
+	margin-left: 0;
+	margin-top: 0.5em;
+}
+
+#productmain section section:nth-of-type(5) div:nth-of-type(2) p {
+	margin-left: 18em;
+	margin-top: 0.7em;
+	color: var(--color-textblack);
+	text-decoration: none;
+}
+
+#productmain section section:nth-of-type(5) div:nth-of-type(3) img {
+	max-width: 3em;
+	margin-top: 0.5em;
+	margin-left: 0;
+}
+
+#productmain section section:nth-of-type(5) div:nth-of-type(3) p {
+	margin-top: 0.7em;
+	margin-left: 4.7em;
+	color: var(--color-textblack);
+	text-decoration: none;
+}
+
+#productmain section section:nth-of-type(5) div:nth-of-type(4) p {
+	color: var(--color-textblack);
+	font-weight: 600;
+	text-decoration: none;
+	margin-top: 1em;
+	margin-left: 5em;
+}
+
+#productmain section section:nth-of-type(5) div:nth-of-type(4) p:nth-of-type(2) {
+	margin-top: 3em;
+	margin-left: -5.5em;
+	font-weight: 300;
+	padding-bottom: 3em;
+}
+
+#review {
+	max-width: 18em;
+	margin-left: 3.5em;
+}
+
+#productmain section section:nth-of-type(6) {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#productmain section section:nth-of-type(6) h2 {
+	margin-top: 2em;
+	margin-left: 5em;
 	font-size: 1.3em;
 }
 
-section div img {
-	max-width: 13em;
-
-}	
-
-section div ul {
-	display: flex;
-	list-style-type: none;
-	gap: 1px;
+#productmain section section:nth-of-type(6) div img {
+	max-width: 11em;
+	margin-left: 1.5em;
 }
 
-
+#productmain section section:nth-of-type(6) div p {
+	max-width: 11.3em;
+	font-size: 0.9em;
+}
+ 
 
 
 /*footer*/
 
 footer {
-	background-color: black;
-	color: white;
+	background-color: var(--color-footerbackground);
+	color: var(--color-footerwhite);
 	padding: 40px 20px;
+	margin-top: 5em;
   }
 
   
@@ -471,6 +847,10 @@ footer {
 	margin-bottom: 5px;
 	font-weight: 600;
 	margin-top: 50px;
+  }
+
+  #productmain footer h2 {
+	margin-bottom: 5em;
   }
   
   footer ul {
@@ -488,7 +868,7 @@ footer {
   }
   
   footer ul li a {
-	color: white;
+	color: var(--color-footerwhite);
 	text-decoration: none;
 	font-size: 0.9rem;
   }
@@ -503,18 +883,17 @@ footer {
   
   footer section button {
 	padding: 12px 25px;
-	background-color: white;
-	color: black;
+	background-color: var(--color-footerwhite);
+	color: var(--color-footerbackground);
 	border: none;
 	cursor: pointer;
 	margin-top: 10px;
-	transition: background-color 0.3s;
 	font-size: 1em;
 	font-weight: 400;
   }	
   
   footer section button:hover {
-	background-color: #ddd; /* Lighten button on hover */
+	background-color: var(--color-borderbottom); /* Lighten button on hover */
   }
   
   footer section img {

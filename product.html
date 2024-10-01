@@ -6,83 +6,207 @@
 	<meta name="author" content="jouw naam">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	<title></title>
+	<title>Product</title>
 	
 	<link href="styles/style.css" rel="stylesheet">
 	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 </head>
 <body>
-    <header>
+	<header>
 		<section>
 			<p>Flash Sale</p>
 		</section>
 		<nav>
 			<ul>
-				<li><a href="hamburgermenu.html">hamburgermenu</a></li>
-				<li><a href="zoeken.html">zoeken</a></li>
-				<li><a href="index.html">spalding logo</a></li>
-				<li><a href="profiel.html">profielicoon</a></li>
-				<li><a href="winkelwagen.html">winkelwagenicoon</a></li>
+				<li>
+					<a href="#" id="hamburger"><img src="images/hamburgermenu-icoon.webp" alt="hamburgermenu"/></a>
+				</li>
+				<li>
+					<a href="zoeken.html"><img src="images/zoek-icoon-website-fed.webp" alt="zoeken"/></a>
+				</li>
+				<li class="spalding-logo">
+					<a href="index.html"><img src="images/spalding-logo_310x.png" alt="Spalding logo"/></a>
+				</li>
+				<li>
+					<a href="profiel.html"><img src="images/profiel-icoon-website-fed.webp" alt="profiel"/></a>
+				</li>
+				<li>
+					<a href="winkelwagen.html"><img src="images/shopping-icoon-website-fed.webp" alt="shoppingcart"/></a>
+				</li>
 			</ul>
+			<div class="hamburger-menu" id="hamburger-menu">
+				<button id="close-button" class="close-button">✖</button>
+				<ul>
+					<li><a href="#">Basketbal</a></li>
+					<li><a href="#">Heren</a></li>
+					<li><a href="#">Dames</a></li>
+					<li><a href="#">Kinderen</a></li>
+					<li><a href="#">Outlet</a></li>
+					<li>
+						<a href="#">Nederland (EUR€)</a>
+						<ul>
+							<li><a href="#">België (EUR€)</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
 		</nav>
 	</header>
-    <main>
+    <main id="productmain">
         <section>
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <h2>The Beast 60" draagbare basketbalring</h2>
-            <p>$1.995,95</p>
-            <p>1 beoordeling</p>    
-        </section>
-        <section>
-            <h3>AANTAL</h3>
-            <button>-</button>
-            <button>+</button>
-            <button>IN HET WINKELMANDJE</button>
-            <p>SKU: 7B1560CN</p>
-            <p>beschrijving</p>
-            <button>+</button>
-            <p>Features</p>
-            <button>+</button>
-            <a href="#">INTERACTIVE MANUAL</a>
-            <a href="#">OWNER'S MANUAL</a>
-        </section>
-        <section>
-            <img src="" alt="">
-            <h2>Robust steel rim</h2>
-            <p>Unleash your inner dunking prowess with the robust steel rim, 
-                engineered to withstand the most vigorous of dunks and drives. 
-                What's more, the rim's height can be tailored to your preference, 
-                effortlessly transitioning between 7.5 feet to the standard 10-foot 
-                height endorsed by leagues. This adaptable system derives its 
-                steadfast stability from a two-piece 5" square steel pole.</p>
-            <img src="" alt="">
-            <h2>Portable basketball hoop</h2>
-            <p>Enhancing its mobility, the hoop rests upon the Power Move™ Base, 
-                a 55-gallon foundation fitted with four wheels. This design eliminates 
-                the need for tilting the entire system forward, allowing you to seamlessly 
-                transport it along your driveway.</p>
-        </section>
+			<section>
+			<div>
+				<img src="images/volledigebasket.jpg" alt="volledige foto van de basket">
+				<ul>
+					<li><img src="images/volledigebasket.jpg" alt="volledige foto van de basket"></li>
+					<li><img src="images/basket.jpg" alt="basketdichtbij"></li>
+					<li><img src="images/achterkant-basket.jpg" alt="achterkant foto van de basket"></li>
+					<li><img src="images/onderkantbasket.jpg" alt="onderste deel van basket img"></li>
+					<li><img src="images/basketbalthumbnail.jpg" alt="basketbalthumbnail"></li>
+				</ul>
+
+				<h1>The Beast 60" draagbare basketbalring</h1>	
+				<p>$1.995,95</p>
+				<div>
+					<img src="images/5sterrenscreenshot.png" alt="5sterren screen shot">
+					<p>1 beoordeling</p>  
+			  	</div>
+		    </div>  
+        	</section>
+        	<section>
+				<p>Aantal</p>
+				<button id="minus">-</button>
+    			<span id="quantity">1</span> 
+    			<button id="plus">+</button>
+				<button id="Winkelmandje">IN HET WINKELMANDJE</button>
+				<p><span>SKU:</span>7B1560CN</p>
+				<details>
+					<summary>
+						<span>Beschrijving</span>
+						<img src="images/plusje.png" alt="plusje">
+					</summary>
+					<p>Het enige draagbare systeem van zijn grootte, The Beast 
+					draagbare basketbalring geeft je de stabiliteit van een in-ground, 
+					maar met een wielenbasis die het gemakkelijk maakt om te verplaatsen. 
+					De 60" backboard geeft je de ware rebound die je zou vinden op het 
+					professionele veld. Het heeft een stevige stalen rand die felle 
+					dunks en drives aankan, en je kunt de hoogte van de rand aanpassen 
+					tot overal tussen 7,5 voet en de competitie standaard 10 voet. 
+					Deze Basketring haalt zijn stabiliteit van een tweedelige 5" 
+					vierkante stalen paal. Het berust op een 55-gallon-basis uitgerust 
+					met 4 wielen, zodat u het over de oprit kunt verplaatsen zonder 
+					het hele systeem vooruit te hoeven kantelen</p>
+				</details>
+				<details>
+					<summary>
+						<span>Features</span>
+						<img src="images/plusje.png" alt="plusje">
+					</summary>
+					<p>• Boardgrootte: 60 ”(152,4 cm)</p>
+					<p>• Boardtype: glas</p>
+					<p>• RIM: Pro Image ™ Breakaway Rim</p>
+					<p>• Lifttype: Screw Jack Infinite Lift</p>
+					<p>• Basis: Power Move ™ Base</p>
+					<p>• Run off van basis naar net: 24,25 ”(61,6 cm)</p>
+					<p>• Hoogte-aanpassing: 7,5 ’tot 10’ (2,28 tot 3,05 m)</p>
+					<p>• Paal: 5 ”(12,7 cm)</p>
+					<p>• 2-delige paal</p>
+				</details>
+				<a href="#">INTERACTIVE MANUAL</a>
+				<a href="#">OWNER'S MANUAL</a>
+			</section>
+        	<section>
+					<img src="images/Basketbalschieten.jpg" alt="jongetje speelt basketbal">
+					<h2>Robust steel rim</h2>
+					<p>Unleash your inner dunking prowess with the robust steel rim, 
+						engineered to withstand the most vigorous of dunks and drives. 
+						What's more, the rim's height can be tailored to your preference, 
+						effortlessly transitioning between 7.5 feet to the standard 10-foot 
+						height endorsed by leagues. This adaptable system derives its 
+						steadfast stability from a two-piece 5" square steel pole.</p>
+			</section>
+			<section>
+					<img src="images/basketopzetten.jpg" alt="Twee kinderen die een basket opzetten">
+					<h2>Portable basketball hoop</h2>
+					<p>Enhancing its mobility, the hoop rests upon the Power Move™ Base, 
+						a 55-gallon foundation fitted with four wheels. This design eliminates 
+						the need for tilting the entire system forward, allowing you to seamlessly 
+						transport it along your driveway.</p>
+        	</section>
+			<section>
+				<h2>KLANTENSERVICE</h2>
+				<div>
+					<img src="/images/5sterrenfotogrijs.png" alt="5 sterren">
+					<p>5.00 van de 5</p>
+			    </div>
+				<p>Gebaseerd op 1 beoordeling</p>
+				<img id="review" src="/images/reviewsvandebasket.png" alt="foto van de reviews op de basket">
+					<select id="keuzes" name="keuzes">
+						<option value="optie1">Hoogste waardering</option>
+						<option value="optie2">Laagste waardering</option>
+						<option value="optie3">Alleen afbeeldingen</option>
+						<option value="optie4">Foto's eerst</option>
+						<option value="optie4">Video's eerst</option>
+						<option value="optie4">Meest behulpzaam</option>
+					</select>
+				<div>
+					<img src="/images/5sterrenfotogrijs.png" alt="5 sterren">
+					<p>21/12/2022</p>
+				</div>
+				<div>
+					<img src="/images/profielicoonfoto.png" alt="profiel icoon foto">
+					<p>Sami B.M.</p>
+				</div>
+				<div>
+					<p>Greta Stuff</p>
+					<p>We loving it</p>
+				</div>
+			</section>
+			<section>
+				<h2>YOU MAY ALSO LIKE</h2>
+				<div>
+					<img src="images/spalding-grip-basketbal.jpg" alt="Spalding grip basketbal oranje">
+					<p>Max Grip Composiet Indoor/Outdoor Basketbal</p>
+					<p>€69,95</p>
+				</div>
+				<div>
+					<img src="images/zwarte-basket.jpg" alt="zwarte basket spalding">
+					<p>Highlight 44" Composiet Draagbare Basketbalring</p>
+					<p>€349,95</p>
+				</div>
+				<div>
+					<img src="images/paarse-basketbal.jpg" alt="Paarse basketbal spalding">
+					<p>All Conference Composite Indoor/Outdoor Basketball</p>
+					<p>€59,95</p>
+				</div>
+				<div>
+					<img src="images/zilverebasket.jpg" alt="Zilvere basket spalding">
+					<p>Silver In-Ground Basketball Hoop</p>
+					<p>€799,95</p>
+				</div>
+
+			</section>
+		</section>
         <footer>
-            <section>
+			<section>
 				<h2>OVER SPALDING</h2>
 				<ul>
 					<li><a href="#">Geschiedenis</a></li>
 					<li><a href="#">125 jaar</a></li>
 					<li><a href="#">Facebook</a></li>
 					<li><a href="#">Instagram</a></li>
-					<li><a href="#">Tiktok</a></li>
+					<li><a href="#">TikTok</a></li>
 				</ul>
-			</section>
-			<section>
-				<li><a href="#">FAQ</a></li>
+				<h2>KLANTENSERVICE</h2>
+				<ul>
+					<li><a href="#">FAQ</a></li>
 					<li><a href="#">Handleidingen</a></li>
 					<li><a href="#">Club Catalogs 2023</a></li>
+					<li><a href="#">Contact</a></li>
+					<li><a href="#">Verzenden</a></li>
+					<li><a href="#">Retourneren</a></li>
+					<li><a href="#">Garantie</a></li>
 				</ul>
-			</section>
-			<section>
 				<h2>WETTELIJK</h2>
 				<ul>
 					<li><a href="#">Algemene voorwaarden</a></li>
@@ -91,32 +215,28 @@
 					<li><a href="#">Cookiebeleid</a></li>
 					<li><a href="#">Imprint</a></li>
 				</ul>
-			</section>
-			<section>
 				<h2>SCHRIJF JE IN VOOR DE NIEUWSBRIEF</h2>
-				<p> Schrijf je in voor onze nieuwsbrief en 
-					wees als eerste op de hoogte van onze deals en toffe content. 
-					En krijg 10% korting op je eerste bestelling!</p>
-				<p>Email</p>
+				<p>
+					Schrijf je in voor onze nieuwsbrief en wees als eerste
+					op de hoogte van onze deals en toffe content. En krijg
+					10% korting op je eerste bestelling!
+				</p>
+				<p>Email:</p>
+				<input type="email" placeholder="E-MAIL" />
 				<button>Bevestig</button>
 			</section>
 			<section>
-				<img src="images/amex logo.png" alt="amex">
-				<img src="images/apple pay logo.png" alt="applepay">
-				<img src="images/google pay logo.webp" alt="googlepay">
-				<img src="images/iDEAL logo.png" alt="ideal">
-				<img src="images/mastercard rood logo.svg" alt="mastercard">
-				<img src="images/PayPal-Logo.png" alt="paypal">
-				<img src="images/shop app logo.png" alt="shop">
-				<img src="images/UnionPay_logo.svg.png" alt="unionpay">
-				<img src="" alt="">
-				<img src="" alt="">
-			</section>			<h2>KLANTENSERVICE</h2>
-				<ul>
-					<li><a href="#">Contact</a></li>
-					<li><a href="#">Verzenden</a></li>
-					<li><a href="#">Retourneren</a></li>
-					<li><a href="#">Garantie.html</a></li>
-        </footer>
+				<img src="images/amex-logo.png" alt="Amex" />
+				<img src="images/apple-pay-logo.png" alt="Apple Pay" />
+				<img src="images/google-pay-logo.webp" alt="Google Pay" />
+				<img src="images/iDEAL-logo.png" alt="iDEAL" />
+				<img src="images/mastercard-rood-logo.svg" alt="Mastercard"/>
+				<img src="images/PayPal-Logo.png" alt="PayPal" />
+				<img src="images/shop-app-logo.png" alt="Shop App" />
+				<img src="images/UnionPay-logo.svg.png" alt="UnionPay" />
+			</section>
+		</footer>
     </main>
+
+	<script src="scripts/script.js"></script>
 </body>
